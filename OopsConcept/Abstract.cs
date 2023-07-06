@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OopsConcept
 {
+    /// <summary>
+    /// Abstract class concept - use of abstract class and abstract method
+    /// </summary>
     public abstract class AndriodBase
     {
         public string? Name { get; set; }
@@ -13,13 +16,29 @@ namespace OopsConcept
         public double DevelopmentCost { get; set; }
         public double CompanyCost { get; set; }
 
+        
+        /// <summary>
+        /// use as abstract - if derived class to be forced to implement method of abstract class
+        /// </summary>
+        //public abstract void PriceBenchmark();
+
+        /// <summary>
+        /// use as virtual - if derived class is not forced to be implement method which is in abstract class
+        /// </summary>
         public virtual void PriceBenchmark() { }
     }
 
+    /// <summary>
+    /// derived class - inherited the AndriodBase abstract class
+    /// </summary>
     public class ChromeBook : AndriodBase
     {
 
     }
+
+    /// <summary>
+    /// derived class - inherited the AndriodBase abstract class
+    /// </summary>
     public class GooglePixelMobile : AndriodBase
     {
         public bool LightWeight { get; set; }
@@ -31,6 +50,9 @@ namespace OopsConcept
         }
     }
 
+    /// <summary>
+    /// derived class - inherited the AndriodBase abstract class
+    /// </summary>
     public class GoogleBookTablet : AndriodBase
     {
         public double ResearchCost { get; set; }
